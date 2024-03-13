@@ -1,17 +1,33 @@
 package miPrincipal;
-public class Principal{
-    public static void main(String []arg){
-        //crear una nueva pila de enteros
-        Pila <Integer> pila=new Pila<Integer>();
-        //apilar algunos datos enteros
-        pila.apilar(2);
-        pila.apilar(5);
-        pila.apilar(7);
-        System.out.println("El tope de la pila es "+pila.cima());
-        //se desapila
-        pila.retirar();
-        System.out.println("El tope de la pila es "+pila.cima());
-        pila.retirar();
-        System.out.println("El tope de la pila es "+pila.cima());
+import java.util.Scanner;
+public class Principal {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner (System.in);
+        int opcion=0;
+        do{
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            System.out.println("      Estructuras lineales ");
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            System.out.println(" 1)  Pila");
+            System.out.println(" 2)  Stack");
+            System.out.println(" 0)  Salir");
+            System.out.print("     Selecciona opcion:");
+            opcion=sc.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    DemoPila.menu(args);
+                    break;
+                case 2:
+                    DemoStack.menu(args);
+                    break;
+            
+                default:
+                    break;
+            }
+
+
+        }while(opcion!=0);
     }
+    
 }

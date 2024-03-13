@@ -3,6 +3,8 @@ public class Pila <T> {
     private Nodo <T> cabeza;//apunta al tope de la pila
     private int size;//almacena el total de elementos de la pila 
 
+    //modificar y añadir metodo buscar en la pila
+
     //constructor por defecto
     public Pila(){
         cabeza=null;//null porque es generico 
@@ -54,4 +56,5 @@ public class Pila <T> {
             return null;
         }
     }
+   
 }

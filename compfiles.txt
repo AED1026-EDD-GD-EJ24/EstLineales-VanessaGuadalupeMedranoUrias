@@ -1,4 +1,5 @@
 ./miTest/AppTest.java
-./miPrincipal/ClienteMain.java
+./miPrincipal/DemoStack.java
 ./miPrincipal/Pila.java
+./miPrincipal/Principal.java
 ./miPrincipal/Nodo.java
