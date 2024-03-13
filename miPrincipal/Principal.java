@@ -16,16 +16,15 @@ public class Principal {
 
             switch (opcion) {
                 case 1:
-                    DemoPila.menu(args);
+                    DemoPila.menu();
                     break;
                 case 2:
-                    DemoStack.menu(args);
+                    DemoStack.menu();
                     break;
             
                 default:
                     break;
             }
-
 
         }while(opcion!=0);
     }

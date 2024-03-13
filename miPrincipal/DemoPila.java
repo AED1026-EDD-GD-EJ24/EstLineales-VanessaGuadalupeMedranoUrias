@@ -1,6 +1,6 @@
 package miPrincipal;
 public class DemoPila{
-    public static void menu(String []arg){
+    public static void menu(){
         System.out.println("~~~~~~~~PILA~~~~~~~~~~~");
         //crear una nueva pila de enteros
         Pila <Integer> pila=new Pila<Integer>();

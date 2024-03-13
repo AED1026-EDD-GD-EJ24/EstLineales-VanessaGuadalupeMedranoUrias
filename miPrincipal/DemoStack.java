@@ -1,7 +1,7 @@
 package miPrincipal;
 import java.util.Stack;
 public class DemoStack {
-    public static void menu(String[] args) {
+    public static void menu() {
         System.out.println("~~~~~~~STACK~~~~~~~~~~~");
         //crear mi pila con elementos tipo entero
         Stack <Integer> pila= new Stack <Integer> ();
