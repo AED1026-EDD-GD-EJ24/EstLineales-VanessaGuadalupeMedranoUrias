@@ -1,4 +1,5 @@
 package miPrincipal;
+import java.util.*;
 public class Pila <T> {
     private Nodo <T> cabeza;//apunta al tope de la pila
     private int size;//almacena el total de elementos de la pila 
@@ -55,6 +56,28 @@ public class Pila <T> {
         {
             return null;
         }
+    }
+    public <T extends Comparable<T>> int buscar(T buscado){
+        
+         if(esVacia()){//si la pila esta vacia devuelve -1
+            return -1;
+        }
+
+        Nodo <T> actual= (Nodo<T>) cabeza;//tope pila
+        T valor;//valor del 1er elemento
+        
+        for(int i=0; i<size; i++){
+          
+            valor=actual.getValor();//get el valor
+           // System.out.println("valor "+valor+" pos "+i);
+            if(valor.compareTo(buscado)==0)//comparar si son iguales 
+            {
+                return i;//devolver la pos
+            }
+            actual=actual.getSiguiente();//get siguiente nodo 
+             
+        }
+        return -1;//no se encontro el elemento devuelve -1
     }
    
 }
