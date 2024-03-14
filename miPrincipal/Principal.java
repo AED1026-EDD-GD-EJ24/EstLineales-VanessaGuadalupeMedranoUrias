@@ -10,6 +10,7 @@ public class Principal {
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             System.out.println(" 1)  Pila");
             System.out.println(" 2)  Stack");
+            System.out.println(" 3)  Delimitadores");
             System.out.println(" 0)  Salir");
             System.out.print("     Selecciona opcion:");
             opcion=sc.nextInt();
@@ -21,6 +22,9 @@ public class Principal {
                 case 2:
                     DemoStack.menu();
                     break;
+                case 3:
+                    DemoDelimitadores.menu();
+                break;
             
                 default:
                     break;
