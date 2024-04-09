@@ -15,13 +15,14 @@ public class Principal {
             System.out.println(" 5) Cola");
             System.out.println(" 6) Queue");
             System.out.println(" 7) Tablas de Dispersion");
+            System.out.println(" 8) Estructura combinada");
 
             System.out.println();
 
             System.out.println("0) SALIR");
             System.out.print("Selecciona opción:");
-            opc=consola.nextInt();
-            switch (opc){
+            opcion=consola.nextInt();
+            switch (opcion){
                 case 1:
                    DemoPila.menu();
                    break;
@@ -41,6 +42,8 @@ public class Principal {
                    break;
                 case 7:
                    DemoTablaDispersion.menu();
+                   case 7:
+                   DemoEstructuraCombinada.menu();
                 case 0:
                     System.out.println("ADIOS!");
                     //consola.close();
