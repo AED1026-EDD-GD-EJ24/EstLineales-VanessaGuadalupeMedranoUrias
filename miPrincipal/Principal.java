@@ -42,7 +42,7 @@ public class Principal {
                    break;
                 case 7:
                    DemoTablaDispersion.menu();
-                   case 7:
+                   case 8:
                    DemoEstructuraCombinada.menu();
                 case 0:
                     System.out.println("ADIOS!");
