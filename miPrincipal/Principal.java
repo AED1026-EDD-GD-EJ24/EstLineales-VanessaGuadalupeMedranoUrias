@@ -16,7 +16,7 @@ public class Principal {
             System.out.println(" 6) Queue");
             System.out.println(" 7) Tablas de Dispersion");
             System.out.println(" 8) Estructura combinada");
-
+            System.out.println(" 9) Lista simplemente enlazada ");
             System.out.println();
 
             System.out.println("0) SALIR");
@@ -42,8 +42,13 @@ public class Principal {
                    break;
                 case 7:
                    DemoTablaDispersion.menu();
+                   break;
                    case 8:
                    DemoEstructuraCombinada.menu();
+                   break;
+               case 9:
+                  DemoListaSimple.menu();
+                  break;
                 case 0:
                     System.out.println("ADIOS!");
                     //consola.close();
