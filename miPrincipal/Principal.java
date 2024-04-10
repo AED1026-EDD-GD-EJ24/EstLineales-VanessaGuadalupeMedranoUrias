@@ -21,7 +21,7 @@ public class Principal {
 
             System.out.println("0) SALIR");
             System.out.print("Selecciona opción:");
-            opcion=consola.nextInt();
+            opcion=sc.nextInt();
             switch (opcion){
                 case 1:
                    DemoPila.menu();

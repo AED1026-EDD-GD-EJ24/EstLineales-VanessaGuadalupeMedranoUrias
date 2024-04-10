@@ -1,5 +1,6 @@
 package miPrincipal;
 import java.util.Collection;
+import java.util.LinkedList;
 public class DemoEstructuraCombinada {
     public static void menu(){
 
