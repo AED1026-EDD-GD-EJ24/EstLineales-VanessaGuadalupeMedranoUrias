@@ -1,4 +1,4 @@
-package miPrincipal;
+package personas;
 public class Personas {
 
     private int idPersona;

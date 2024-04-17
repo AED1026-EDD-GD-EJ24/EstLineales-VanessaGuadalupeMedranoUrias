@@ -19,7 +19,7 @@ public class Principal {
             System.out.println(" 9) Lista simplemente enlazada ");
             System.out.println("10) ArrayList y LinkedList");
             System.out.println("11) ArrayList de personas ");
-            System.out.println();
+            System.out.println("12) LinkedList Cuadrupedos");
 
             System.out.println("0) SALIR");
             System.out.print("Selecciona opción:");
@@ -57,8 +57,11 @@ public class Principal {
                   case 11:
                   DemoArrayListPersonas.menu();
                   break;
+                  case 12:
+                  DemoLinkedListCuadrupedos.menu();
+                  break;
                 case 0:
-                    System.out.println("ADIOS!");
+                    System.out.println("BYE!");
                     //consola.close();
                     break;
                 default:
