@@ -1,8 +1,10 @@
 ./personas/Personas.java
+./cuadrupedo/Cuadrupedo.java
 ./miTest/AppTest.java
 ./miPrincipal/DemoCola.java
 ./miPrincipal/Cola.java
 ./miPrincipal/TestVector.java
+./miPrincipal/DemoListaDeContactos.java
 ./miPrincipal/DemoQueue.java
 ./miPrincipal/HashTable2.java
 ./miPrincipal/DemoPila.java
@@ -11,12 +13,15 @@
 ./miPrincipal/DemoArrayListPersonas.java
 ./miPrincipal/DemoArrayListyLinkedList.java
 ./miPrincipal/DemoDelimitadores.java
+./miPrincipal/ListaDeContactos.java
 ./miPrincipal/DemoListaSimple.java
 ./miPrincipal/Nodo.java
 ./miPrincipal/DemoTablaDispersion.java
 ./miPrincipal/Delimitadores.java
 ./miPrincipal/Pila.java
+./miPrincipal/Contacto.java
 ./miPrincipal/UNombre.java
+./miPrincipal/DemoLinkedListCuadrupedos.java
 ./miPrincipal/DemoStack.java
 ./miPrincipal/Principal.java
 ./miPrincipal/Persona.java

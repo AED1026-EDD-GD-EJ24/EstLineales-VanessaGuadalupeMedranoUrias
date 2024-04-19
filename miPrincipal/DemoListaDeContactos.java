@@ -2,45 +2,23 @@ package miPrincipal;
 
 public class DemoListaDeContactos {
     
-    public static void menu()  {
+    public static void menu() throws PosicionIlegalException {
         System.out.println("************************");
         System.out.println("   LISTA DE CONTACTOS   ");
         System.out.println("************************");
         System.err.println();
-    }
-    public Contacto buscarContacto (String nombres, String apellidos ){
+        ListaDeContactos lcd = new ListaDeContactos();
+        //agregamos algunos contactos
+        lcd.agregarContactos("Vanessa", "Medrano", "Cruz Galvez 3390", "vane.medrano@gmail.com", "01800","6677809010");
+        lcd.agregarContactos("Francisco", "Herrera", "Cruz Galvez 3392", "frank.herrera@gmail.com", "01802","6677809012");
+        lcd.agregarContactos("Paulina", "Garcia", "Cruz Galvez 3394", "pau.garcia@gmail.com", "01804","6677809014");
+        lcd.agregarContactos("Renata", "Gaxiola", "Cruz Galvez 3396", "Renata.gaxiola@gmail.com", "01806","6677809016");
         
-    }
+        Lista<Contato> listado= ldc.mostrarTodosLosContactos();
+        System.out.println("~Listado despues de la agregacion~");
+        for (int i=0; i<listado.getTamanio(); i++){
+            System.out.println(listado.getValor(i));
+        }
 
-public boolean eliminarContacto(String nombres , String apellidos) throws PosicionIlegalException {
-        Contacto con = buscarContacto(nombres,apellidos);
-        if (con!=null){
-            for (int i=0; i<this.contactos.getTamanio(); i++){
-                Contacto contAux = contactos.getValor(i);
-                if (contAux.getNombres().equals(nombres) &&
-                    contAux.getApellidos().equals(apellidos))
-                    {
-                        contactos.remover(i);
-                    }
-            }
-            return true;
-        }
-        return false;
-}
-    public boolean modificarContacto(String nombres, String apellidos,String direccion,
-    String correo, String telefono,String celuar){
-        //verificar si el contato existe 
-        Contacto con = buscarContacto(nombres, apellidos)
-        if (con==null){
-            return false;
-        }
-        else{
-            //modifica el contacto con los nuevos datos 
-            con.setDireccion(direccion);
-            con.setCorreo(correo);
-            con.setTelefono(telefono);
-            con.setCelular(celuar);
-        }
-        return true;
     }
 }
