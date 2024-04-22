@@ -10,44 +10,48 @@ public class DemoLinkedListCuadrupedos {
     public static void menu(){
         System.out.println("~~~~~~~~ LinkedList de cuadrupedos~~~~~~~~~~~");
 
-        try {
-            List<Cuadrupedo> cuadrupedos= new LinkedList<>();
-
-            String [] tipos= {"Leon", "Gato", "Perro","Cocodrilo"};
-
-            Random random=new Random();
-
-            for(int i=0; i<=10000; i++){
-                String tipo= tipos[random.nextInt(tipos.length)];
+        try{
+            List<Cuadrupedo> cuadrupedos = new LinkedList<>();
+            String [] tipos ={"León","Gato","Perro","Elefante"};
+            Random random = new Random();
+            for(int i=1;i<=10000;i++){
+                String tipo = tipos[random.nextInt(tipos.length)];
                 cuadrupedos.add(new Cuadrupedo(i, tipo));
             }
-            int leonesCount=0, gatoCount=0, perroCount=0, cocoCount=0;
+            
+            int leonCount = 0, gatoCount =0, perroCount=0,elefanteCount=0;
             for(Cuadrupedo cuadrupedo:cuadrupedos){
-                if (cuadrupedo.getIdCuadrupedo()%1000==0){
-                    System.out.println("ID"+cuadrupedo.getIdCuadrupedo()+", tipo: "+cuadrupedo.getTipo());
+                if(cuadrupedo.getIdCuadrupedo()%1000==0){
+                    System.out.println("ID"+cuadrupedo.getIdCuadrupedo()+
+                      ",tipo: "+cuadrupedo.getTipo());
                 }
                 switch (cuadrupedo.getTipo()) {
-                    case "Leon":
-                        leonesCount++;
+                    case "León":
+                        leonCount++;
                         break;
                     case "Gato":
-                         gatoCount++;
+                        gatoCount++;
                         break;
                     case "Perro":
-                    perroCount++;
-                    break;
-                    case "Cocodrilo":
-                    cocoCount++;
-                    break;
-                
-                    default:
+                        perroCount++;
                         break;
+                    case "Elefante":
+                       elefanteCount++;
+                       break;
+                       
                 }
+
             }
-            
-        } catch (Exception e) {
+            System.out.println("Resumen:");
+            System.out.println("Leones:"+leonCount);
+            System.out.println("Gatos:"+gatoCount);
+            System.out.println("Perros:"+perroCount);
+            System.out.println("Elefantes"+elefanteCount);
+
+        }catch (Exception e){
             e.printStackTrace();
         }
     }
+    
     
 }

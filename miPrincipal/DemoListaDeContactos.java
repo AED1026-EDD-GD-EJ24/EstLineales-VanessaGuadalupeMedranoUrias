@@ -2,30 +2,58 @@ package miPrincipal;
 
 public class DemoListaDeContactos {
     
-    public static void menu() throws PosicionIlegalException {
+    public static void menu() throws PosicionIlegalException  {
         System.out.println("************************");
         System.out.println("   LISTA DE CONTACTOS   ");
         System.out.println("************************");
         System.err.println();
         ListaDeContactos ldc = new ListaDeContactos();
         //agregamos algunos contactos
-        ldc.agregarContactos("Vanessa", "Medrano", "Cruz Galvez 3390", "vane.medrano@gmail.com", "01800","6677809010");
-        ldc.agregarContactos("Francisco", "Herrera", "Cruz Galvez 3392", "frank.herrera@gmail.com", "01802","6677809012");
-        ldc.agregarContactos("Paulina", "Garcia", "Cruz Galvez 3394", "pau.garcia@gmail.com", "01804","6677809014");
-        ldc.agregarContactos("Renata", "Gaxiola", "Cruz Galvez 3396", "Renata.gaxiola@gmail.com", "01806","6677809016");
-        
-        Lista<Contacto> listado= ldc.mostrarTodosLosContactos();
-        System.out.println("~Listado despues de la agregacion~");
-        for (int i=0; i<listado.getTamanio(); i++){
+        ldc.agregarContactos("Fernando", "Castro", 
+           "C11 No 12 Culiacan","fernandocastro@gmail.com", 
+           "6677160732", "6677511511");
+
+        ldc.agregarContactos("Maria Andrea","Vargas",
+        " C11 No 705 Culiacan", "mariv@gmail.com",
+        "6677121429","6677306142");
+
+        ldc.agregarContactos("Carolina", "Sanchez",
+        ",","carolsa@gmail.com", 
+        "6677121212","6677982515");
+
+        ldc.agregarContactos("Federica", "Cardenas", 
+        ",", "fede@gmail.com",
+        "6677161111","6677921456");
+
+        Lista<Contacto> listado = ldc.mostrarTodosLosContactos();
+        System.out.println("--- Listado después de la agregación ---");
+        for(int i=0;i<listado.getTamanio();i++){
             System.out.println(listado.getValor(i));
         }
-        if (ldc.eliminarContacto("Vanessa ", "Medrano")){
+        if(ldc.eliminaContacto("Fernando", "Castro")){
             System.out.println("Contacto Eliminado");
         }
-        listado=ldc.mostrarTodosLosContactos();
-        System.out.println("~Listado despues de la eliminacion~");
-        for (int i=0; i<listado.getTamanio(); i++){
+
+        listado = ldc.mostrarTodosLosContactos();
+        System.out.println("--- Listado después de la eliminacion ---");
+        for(int i=0;i<listado.getTamanio();i++){
             System.out.println(listado.getValor(i));
         }
+        ldc.modificarContacto("Federica","Cardenas","laguna de viezca 705 culiacan",
+        "fede@gmail.com","6677161111","6677921456");
+        
+        listado = ldc.mostrarTodosLosContactos();
+        System.out.println("--- Listado después de la modificación ---");
+        for(int i=0;i<listado.getTamanio();i++){
+            System.out.println(listado.getValor(i));
+        }
+        //agregar contacto que ya existe 
+        if (ldc.agregarContactos("Maria Andrea", "Vargas", " C11 No 705 Mazatlan" , "mariv@gmail.com" "6677121429","6677306142"))
+        {
+            
+        }
+
+
+        
     }
 }
