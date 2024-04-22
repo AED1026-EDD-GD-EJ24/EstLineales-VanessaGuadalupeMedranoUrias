@@ -50,9 +50,9 @@ public class DemoListaDeContactos {
         //agregar contacto que ya existe 
         if (ldc.agregarContactos("Maria Andrea", "Vargas", " C11 No 705 Mazatlan" , "mariv@gmail.com" "6677121429","6677306142"))
         {
-            
+          System.out.println("Contacto agregado");;  
         }
-
+       
 
         
     }
