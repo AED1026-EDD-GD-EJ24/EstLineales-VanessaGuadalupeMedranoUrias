@@ -20,6 +20,8 @@
 ./miPrincipal/Delimitadores.java
 ./miPrincipal/PosicionIlegalException.java
 ./miPrincipal/Pila.java
+./miPrincipal/DemoListaCircular.java
+./miPrincipal/ListaCircular.java
 ./miPrincipal/Contacto.java
 ./miPrincipal/UNombre.java
 ./miPrincipal/DemoLinkedListCuadrupedos.java

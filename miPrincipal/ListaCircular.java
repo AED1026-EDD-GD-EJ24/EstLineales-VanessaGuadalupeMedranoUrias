@@ -1,63 +1,74 @@
 package miPrincipal;
 
-public class Lista <T>{
-    //atributos 
+public class ListaCircular<T> {
+    //Atributos 
     //primer nodo de la lista
-    private Nodo <T> cabeza;
-    //total de elementos de la lista 
-    private int size;
-    //constructor por defecto 
-    public Lista (){
-        cabeza=null;
-        size=0;
+    private Nodo<T> cabeza;
+    // total de elementos en la lista
+    private int tamanio;
+    //Constructor por defecto
+    public ListaCircular(){
+        cabeza= null;
+        tamanio = 0;
     }
-    //devuelve el tamaño de la lista 
-    public int getSize() {
-        return size;
+    //Devuelve el tamaño de la lista
+    public int getTamanio() {
+        return tamanio;
     }
-    //consulta si la lista esta vacia
-    public boolean esVacio(){
-        if (cabeza==null){
-            return true;
-        }
-        return false;
-    }
-    //agraga un nuevo nodo al final de la lista 
-    public void agregar (T valor){
-        Nodo <T> nuevo =new Nodo <T> ();
-        nuevo.setValor(valor);
-        if(esVacio())
-        {
-            cabeza=nuevo;
-        }
+    //Consulta si la lista esta vacia
+    public boolean esVacia(){
+        if (cabeza == null)
+            return true;    
         else
-        {//agregar al final de la lista 
-            Nodo <T> aux = cabeza;
-            while (aux.getSiguiente()!=null) {
-                aux=aux.getSiguiente();
-            }
+            return false;  
+    }
+    public void agregar(T valor){
+        Nodo<T> nuevo = new Nodo<T>();
+        nuevo.setValor(valor);
+        if (esVacia()){
+            cabeza = nuevo; 
+            //como hay un solo nodo,el siguiente apunta al mismo nodo
+            nuevo.setSiguiente(nuevo);
+        }else{  
+            //agregar al final de la lista  
+            Nodo<T> aux = cabeza;
+            while(aux.getSiguiente()!=cabeza){
+                aux = aux.getSiguiente();
+            }   
             aux.setSiguiente(nuevo);
-
+            //enlazar el ultimonodo con el primero
+            nuevo.setSiguiente(cabeza);
         }
-        size++;
+        tamanio++;
+
     }
     public void insertar(T valor, int pos) throws PosicionIlegalException{
-        if(pos>=0 && pos<=size){
+        if(pos>=0 && pos<=tamanio){
             Nodo<T> nuevo = new Nodo<T>();
             nuevo.setValor(valor);
             //el nuevo nodo se inserta al inicio de la lista
             if(pos==0){
                 nuevo.setSiguiente(cabeza);
+                //buscar el ultimo nodo
+                Nodo<T> ultimo= cabeza;
+                while (ultimo.getSiguiente()!=cabeza) {
+                    ultimo=ultimo.getSiguiente();
+                }
+                nuevo.setSiguiente(cabeza);
                 cabeza = nuevo;
+                //enlazar el ultimo con el primero
+                ultimo.setSiguiente(cabeza);
             }
             else{
                 //el nuevo nodo se inserta al final de la lista
-                if(pos==size){
+                if(pos==tamanio){
                     Nodo<T> aux = cabeza;
-                    while(aux.getSiguiente()!=null){
+                    while(aux.getSiguiente()!=cabeza){
                         aux = aux.getSiguiente();
                     }
                     aux.setSiguiente(nuevo);
+                    //enlazar el ultimo con el primero
+                    nuevo.setSiguiente(cabeza);
                 }
                 else{
                     //el nuevo nodo se inserta en cualquier posicion de la lista
@@ -71,7 +82,7 @@ public class Lista <T>{
                 }
                 
             }
-            size++;
+            tamanio++;
 
         }
         else{
@@ -82,7 +93,7 @@ public class Lista <T>{
     }
     //Devueve el valor de una determinada posicion
     public T getValor(int pos) throws PosicionIlegalException{
-        if(pos>=0 && pos<size)
+        if(pos>=0 && pos<tamanio)
         {
             T valor;
             if(pos ==0){
@@ -105,11 +116,19 @@ public class Lista <T>{
         }
     }
     public void remover (int pos) throws PosicionIlegalException{
-        if(pos>=0 && pos<size){
+        if(pos>=0 && pos<tamanio){
             if (pos==0){
                 //el nodo a eliminar esta en la primera posicion
+                //buscar el ultimo nodo para enlazarlo
+                Nodo<T> ultimo=cabeza;
+                while(ultimo.getSiguiente()!=cabeza){
+                    ultimo=ultimo.getSiguiente();
+                }
+                //dezplazamos la cabeza al siguiente nodo
                 cabeza= cabeza.getSiguiente();
-                size--;
+                //enlazar el ultimo con la nueva cabeza 
+                ultimo.setSiguiente(cabeza);
+                tamanio--;
             }
             //se elimina en medio y al final
             else{
@@ -119,7 +138,7 @@ public class Lista <T>{
                 }
                 Nodo<T> prox = aux.getSiguiente();
                 aux.setSiguiente(prox.getSiguiente());
-                size--;
+                tamanio--;
             }
 
         }
@@ -130,15 +149,9 @@ public class Lista <T>{
     //elimina toda la lista
     public void limpiar(){
         cabeza=null;
-        size=0;
+        tamanio=0;
 
     }
 
-
+    
 }
-
-    
-    
-    
-    
-

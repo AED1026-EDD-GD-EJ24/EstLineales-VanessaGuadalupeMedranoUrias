@@ -27,7 +27,7 @@ public class DemoListaDeContactos {
 
         Lista<Contacto> listado = ldc.mostrarTodosLosContactos();
         System.out.println("--- Listado después de la agregación ---");
-        for(int i=0;i<listado.getTamanio();i++){
+        for(int i=0;i<listado.getSize();i++){
             System.out.println(listado.getValor(i));
         }
         if(ldc.eliminaContacto("Fernando", "Castro")){
@@ -36,7 +36,7 @@ public class DemoListaDeContactos {
 
         listado = ldc.mostrarTodosLosContactos();
         System.out.println("--- Listado después de la eliminacion ---");
-        for(int i=0;i<listado.getTamanio();i++){
+        for(int i=0;i<listado.getSize();i++){
             System.out.println(listado.getValor(i));
         }
         ldc.modificarContacto("Federica","Cardenas","laguna de viezca 705 culiacan",
@@ -44,16 +44,16 @@ public class DemoListaDeContactos {
         
         listado = ldc.mostrarTodosLosContactos();
         System.out.println("--- Listado después de la modificación ---");
-        for(int i=0;i<listado.getTamanio();i++){
+        for(int i=0;i<listado.getSize();i++){
             System.out.println(listado.getValor(i));
         }
         //agregar contacto que ya existe 
-        if (ldc.agregarContactos("Maria Andrea", "Vargas", " C11 No 705 Mazatlan" , "mariv@gmail.com" "6677121429","6677306142"))
+        if (ldc.agregarContactos("Maria Andrea", "Vargas", " C11 No 705 Mazatlan" , "mariv@gmail.com", "6677121429","6677306142"))
         {
           System.out.println("Contacto agregado");;  
         }
        
-
+       
         
     }
 }

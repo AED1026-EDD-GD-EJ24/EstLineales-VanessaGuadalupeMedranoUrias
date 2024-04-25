@@ -41,7 +41,7 @@ public class ListaDeContactos {
      */
     public Contacto buscarContacto(String nombres, String apellidos) 
                throws PosicionIlegalException{
-            for(int i=0;i<contactos.getTamanio();i++){
+            for(int i=0;i<contactos.getSize();i++){
                 Contacto con = contactos.getValor(i);
                 if(nombres.equals(con.getNombres()) && apellidos.equals(con.getApellidos()))
                 {
@@ -65,7 +65,7 @@ public class ListaDeContactos {
 
             Contacto con = buscarContacto(nombres,apellidos);
             if(con !=null){
-                for(int i=0;i<this.contactos.getTamanio();i++){
+                for(int i=0;i<this.contactos.getSize();i++){
                     Contacto contAux = contactos.getValor(i);
                     if(contAux.getNombres().equals(nombres) && 
                        contAux.getApellidos().equals(apellidos))

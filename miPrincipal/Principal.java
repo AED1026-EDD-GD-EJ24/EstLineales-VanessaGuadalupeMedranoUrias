@@ -1,7 +1,7 @@
 package miPrincipal;
 import java.util.Scanner;
 public class Principal {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws PosicionIlegalException   {
         Scanner sc= new Scanner (System.in);
         int opcion=0;
         do{
@@ -21,6 +21,7 @@ public class Principal {
             System.out.println("11) ArrayList de personas ");
             System.out.println("12) LinkedList Cuadrupedos");
             System.out.println("13) Lista de Contactos");
+            System.out.println("14) Lista Circular");
 
             System.out.println("0) SALIR");
             System.out.print("Selecciona opción:");
@@ -63,6 +64,9 @@ public class Principal {
                   break;
                   case 13:
                   DemoListaDeContactos.menu();
+                  break;
+                  case 14: 
+                  DemoListaCircular.menu();
                   break;
                 case 0:
                     System.out.println("BYE!");

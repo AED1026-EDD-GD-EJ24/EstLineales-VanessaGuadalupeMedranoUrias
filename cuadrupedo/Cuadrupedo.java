@@ -2,7 +2,7 @@ package cuadrupedo;
 
 public class Cuadrupedo {
     private int idCuadrupedo;
-    private String tipo
+    private String tipo;
     public Cuadrupedo(int idCuadrupedo, String tipo) {
         this.idCuadrupedo = idCuadrupedo;
         this.tipo = tipo;
@@ -26,3 +26,4 @@ public class Cuadrupedo {
     
     
 }
+
