@@ -21,7 +21,10 @@ public class Principal {
             System.out.println("11) ArrayList de personas ");
             System.out.println("12) LinkedList Cuadrupedos");
             System.out.println("13) Lista de Contactos");
-            System.out.println("14) Lista Circular");
+            System.out.println("14) Lista doblemente ligada");
+            System.out.println("15) Lista circular ");
+            System.out.println("16) Lista doble circular");
+           
 
             System.out.println("0) SALIR");
             System.out.print("Selecciona opción:");
@@ -66,8 +69,13 @@ public class Principal {
                   DemoListaDeContactos.menu();
                   break;
                   case 14: 
+                  DemoListaDobleLigada.menu();
+                  break;
+                  case 15: 
                   DemoListaCircular.menu();
                   break;
+                  case 16:
+                  DemoListaDobleCircular.menu();
                 case 0:
                     System.out.println("BYE!");
                     //consola.close();

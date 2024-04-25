@@ -9,12 +9,17 @@
 ./miPrincipal/HashTable2.java
 ./miPrincipal/DemoPila.java
 ./miPrincipal/DemoEstructuraCombinada.java
+./miPrincipal/listaDoble/ListaDobleCircular.java
+./miPrincipal/listaDoble/Nodo.java
+./miPrincipal/listaDoble/ListaDoblementeEnlazada.java
 ./miPrincipal/Lista.java
 ./miPrincipal/DemoArrayListPersonas.java
+./miPrincipal/DemoListaDobleCircular.java
 ./miPrincipal/DemoArrayListyLinkedList.java
 ./miPrincipal/DemoDelimitadores.java
 ./miPrincipal/ListaDeContactos.java
 ./miPrincipal/DemoListaSimple.java
+./miPrincipal/DemoListaDobleLigada.java
 ./miPrincipal/Nodo.java
 ./miPrincipal/DemoTablaDispersion.java
 ./miPrincipal/Delimitadores.java
